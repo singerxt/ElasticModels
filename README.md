@@ -1,4 +1,5 @@
 # ElasticModels
+![dep](https://david-dm.org/singerxt/elasticmodels.svg)
 
 ElasticModels is a [elasticsearch](https://github.com/elastic/elasticsearch) object modeling tool designed to work in and asynchronous environment.
 Builded for [official elasticsearch client library](https://github.com/elastic/elasticsearch-js)
@@ -57,7 +58,7 @@ const video = schema('video', {
   comments: { //Async field
     type: [Object],
     dependencies: ['videoId'],
-    translation: videoId => getVideoCommentsForId('id'), // this returning Promise 
+    translation: videoId => getVideoCommentsForId('id'), // this returning Promise
   }, {
     index: 'video', // required! elastic search index
     type: 'fullEpisode', // required! elasticsearch type
