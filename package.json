@@ -1,0 +1,38 @@
+{
+  "name": "ElasticModels",
+  "version": "0.0.1",
+  "description": "Models for elasticsearch!",
+  "author": "Mateusz Śpiewak <mat.spiewak@gmail.com>",
+  "contributors": [
+    {
+      "name": "Mateusz Śpiewak",
+      "email": "foo.bar@example.com"
+    }
+  ],
+  "bin": {
+    "ElasticModels": "./bin/module-name"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodejitsu/browsenpm.org"
+  },
+  "bugs": {
+    "url": "https://github.com/nodejitsu/browsenpm.org/issues"
+  },
+  "keywords": [
+    "nodejitsu",
+    "example",
+    "browsenpm"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "ramda": "^0.22.1"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}

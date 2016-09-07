@@ -1,0 +1,33 @@
+{
+  "extends" : [
+    "airbnb"
+  ],
+  "env"     : {
+    "browser" : false,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__DEBUG_NEW_WINDOW__" : false,
+    "__BASENAME__" : false
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "semi" : [2, "always"],
+    "no-param-reassign": 0,
+    "func-names": 0,
+    "no-shadow": [2, {"allow": ["err", "done", "user", "data", "options"]}],
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used", "argsIgnorePattern": "next|options"}],
+    "new-cap": [2, {"capIsNewExceptions": ["Router","Promise"]}],
+    "no-else-return": 0,
+    "strict": 0,
+    "global-require": 0,
+    "no-underscore-dangle": 0
+  }
+}
