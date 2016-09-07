@@ -1,5 +1,6 @@
 # ElasticModels
 ![dep](https://david-dm.org/singerxt/elasticmodels.svg)
+![ready?](https://img.shields.io/badge/state-in%20progress-yellow.svg)
 
 ElasticModels is a [elasticsearch](https://github.com/elastic/elasticsearch) object modeling tool designed to work in and asynchronous environment.
 Builded for [official elasticsearch client library](https://github.com/elastic/elasticsearch-js)
