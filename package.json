@@ -32,6 +32,7 @@
     "bluebird": "^3.4.6",
     "eslint-config-standard": "^6.0.0",
     "express": "^4.14.0",
+    "moment": "^2.14.1",
     "ramda": "^0.22.1"
   },
   "devDependencies": {
