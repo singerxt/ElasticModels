@@ -1,0 +1,5 @@
+--require should
+--require ./lib/test/assertions.js
+--timeout 10000
+--reporter mocha-circleci-reporter
+--recursive
