@@ -41,30 +41,31 @@ const client = new elasticsearch.Client({
   host: 'localhost:9200',
   log: 'trace'
 });
-const { schema } = require('./lib')(client, {});
+const { schema, types } = require('./lib')(client, {})
+const { string, integer, object, array } = types
 
 const video = schema('video', {
   id: {
-    type: String,
+    type: string
   },
   length: {
-    type: Number,
+    type: integer
   },
   description: {
-    type: String,
+    type: string
   },
   descriptionShort: {
-    type: String,
+    type: string,
     dependencies: ['description'],
-    translation: description => description.subString(0, 20) + '...',
+    translation: description => description.subString(0, 20) + '...'
   },
   comments: { //Async field
-    type: [Object],
+    type: array,
     dependencies: ['videoId'],
-    translation: videoId => getVideoCommentsForId('id'), // this returning Promise
+    translation: videoId => getVideoCommentsForId('id') // this returning Promise
   }, {
     index: 'video', // required! elastic search index
-    type: 'fullEpisode', // required! elasticsearch type
+    type: 'fullEpisode' // required! elasticsearch type
   },
 });
 
