@@ -78,14 +78,14 @@ You have couple options to define field in schema. The most simple is
 1. Simple field. This field will looks if `id` exist in data and return value.
 ```javascript
 id: {
-  type: String,
+  type: string,
 }
 ```
 
 2. Field with string translation. If you need to get value from object type field you can use define field like this.
 ```javascript
 name: {
-  type: String,
+  type: string,
   translation: 'namespace.description' // You can use dot notation. :-)
 }
 ```
@@ -93,7 +93,7 @@ name: {
 3. Field with string translation with fallback. If you need to get value from field/object and if not exist you want to fallback from another data.
 ```javascript
 description: {
-  type: String,
+  type: string,
   translation: ['namespace.description, default.description'],
 }
 ```
@@ -101,7 +101,7 @@ description: {
 4. Field with function as translation. If you need to execute code before feeling a field. (Sync)
 ```javascript
 description: {
-  type: String,
+  type: string,
   dependencies: ['namespace.description, default.description'],
   translate: (desc, defaultDesc, options) => {
     if (desc) {
@@ -120,9 +120,9 @@ you can return `Promise` from translation function.
 
 ```javascript
 articles: {
-  type: Array,
-  dependencies: ['articlesIds'];
-  translation: (articlesIds) => articleModel.find({id: articlesIds}).then(docs => docs.getDocuments);
+  type: array,
+  dependencies: ['articlesIds'],
+  translation: (articlesIds) => articleModel.find({id: articlesIds}).then(docs => docs.getDocuments)
 }
 ```
 
