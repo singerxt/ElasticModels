@@ -1,0 +1,1 @@
+'use strict';const{find,findById}=require('./Find'),{methods}=require('./Methods'),{create}=require('./Create'),schema=(a,b)=>(c,d,e)=>{const f={schema:d,options:e,elasticSearchClient:a,config:b,name:c,index:e.index,type:e.type,methods:{}};return Object.assign({},findById(f),find(f),methods(f),create(f),{methods:f.methods},f)};module.exports=schema;

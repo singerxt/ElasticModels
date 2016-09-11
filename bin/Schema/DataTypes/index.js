@@ -1,0 +1,1 @@
+'use strict';const boolean=require('./boolean/index'),data=require('./data'),{long,integer,short,byte,double,float}=require('./numeric/index'),string=require('./string/index');module.exports={boolean,data,long,integer,short,double,float,byte,string};

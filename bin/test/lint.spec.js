@@ -1,0 +1,1 @@
+const lint=require('mocha-eslint'),paths=['./lib'],options={};options.alwaysWarn=!1,options.timeout=5000,lint(paths,options);

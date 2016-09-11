@@ -60,3 +60,5 @@ fabric.properties
 !.elasticbeanstalk/*.global.yml
 
 testing.js
+
+./bin/*

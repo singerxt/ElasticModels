@@ -1,0 +1,1 @@
+'use strict';const create=({schema:a,options:b})=>({create:c=>document(c,a,b)});module.exports={create};

@@ -1,0 +1,5 @@
+'use strict';const isIntegerAndBetween=(a,b)=>c=>!!(Number.isInteger(c)&&c>=a&&c<=b),validateLong=isIntegerAndBetween(-9223372036854776000,9223372036854776000),validateInteger=isIntegerAndBetween(-2147483648,2147483648),validateShort=isIntegerAndBetween(-32768,32768),validateByte=isIntegerAndBetween(-128,127),validateFloat=a=>+a===a&&!Number.isInteger(a);/**
+ *
+ *
+ * @type {{long: (function(): {name: string, validate: (function(): boolean)}), integer: (function(): {name: string, validate: (function(): boolean)}), short: (function(): {name: string, validate: (function(): boolean)}), byte: (function(): {name: string, validate: (function(): boolean)}), double: (function(): {name: string, validate: (function(): boolean)}), float: (function(): {name: string, validate: (function(): boolean)})}}
+ */module.exports={long:()=>({name:'long',validate:validateLong}),integer:()=>({name:'integer',validate:validateInteger}),short:()=>({name:'short',validate:validateShort}),byte:()=>({name:'byte',validate:validateByte}),double:()=>({name:'byte',validate:validateFloat}),float:()=>({name:'float',validate:validateFloat})};

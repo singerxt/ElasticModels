@@ -1,0 +1,1 @@
+'use strict';const translateFields=({schema:a,options:b={}})=>({translateFields:c=>{return c?b.useNative?c:void 0:{}}}),queryBuilder=a=>{return Object.assign({},translateFields({schema:a}))};module.exports=queryBuilder;

@@ -1,0 +1,1 @@
+'use strict';module.exports=(a,b)=>({schema:require('./Schema')(a,b)});
